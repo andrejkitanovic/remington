@@ -1,0 +1,21 @@
+@import '../../../Colors.scss';
+
+.MiniPlayer{
+    width: 905px;
+    height: 540px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    margin-top: 40px;
+    padding:7px;
+    box-sizing: border-box;
+    border-radius: 3px;
+
+    &.active{
+        background:$main;
+    }
+    
+    video{
+        width: 100%;
+        height: 100%;
+        background:black;
+    }
+}

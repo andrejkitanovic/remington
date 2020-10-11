@@ -1,0 +1,81 @@
+.FilmAbout {
+    display: -webkit-flex;
+    padding-top: 50px;
+    color:#656565;
+
+    .img{
+        min-width: 220px;
+        min-height: 322px;
+        background:no-repeat center center;
+        background-size: cover;
+        border-radius: 5px;
+        margin-right: 31px;
+    }
+
+    .description{
+        p{
+            margin:0;
+        }
+
+        h2{
+            margin:0;
+            font-size: 25px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .name{
+            display: -webkit-flex;
+            align-items: center;
+
+            .rating{
+                display: -webkit-flex;
+                align-items: center;
+                justify-content: center;
+                width: 130px;
+                height: 28px;
+                background:#7c8A9F;
+                margin-left: 30px;
+                border-radius: 50px;
+            }
+
+            .stars{
+                --percent: calc( var(--stars) / 5 * 100%);
+                display: inline-block;
+                font-family: Times; // make sure ★ appears correctly
+                line-height: 1;
+                
+                &::before {
+                  content: '★★★★★';
+                  letter-spacing: 3px;
+                  background: linear-gradient(90deg, #EAEF05 var(--percent), white var(--percent));
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                }
+            }
+
+           
+        }
+
+        .category{
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .year{
+            display: -webkit-flex;
+         
+            p{
+                font-weight: 600;
+                font-size: 18px;
+                margin-right: 30px;
+            }
+            margin-bottom: 15px;
+        }
+
+        .description{
+            width: 500px;
+            line-height: 32px;
+        }
+    }
+}

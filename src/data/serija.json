@@ -1,0 +1,21 @@
+{
+  "img": "https://images-na.ssl-images-amazon.com/images/I/81u7YEO-iJL._AC_SY679_.jpg",
+  "banner": "https://i2.wp.com/redanianintelligence.com/wp-content/uploads/2019/11/witcherposter-Copy.jpg?fit=1084%2C767&ssl=1",
+  "name": "The Witcher",
+  "rating": 2.5,
+  "year": 2020,
+  "category": ["Akcioni", "Drama", "Horor"],
+  "duration": 60,
+  "description": "Lorem Lorem Ipsum is simply dummy text of the printing and typesettingr since the 1500s, when an unknown printer took a galley of.  Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. Lorem Ipsum.",
+  "sezone": {
+    "sezona 1": [{},{},{},{},{}],
+    "sezona 2": [{},{},{},{},{},{},{},{},{},{}],
+    "sezona 3": [{},{},{},{},{}],
+    "sezona 4": [{},{},{},{},{}],
+    "sezona 5": [{},{},{},{},{},{},{},{},{},{}],
+    "sezona 6": [{},{},{},{},{}],
+    "sezona 7": [{},{},{},{},{}],
+    "sezona 8": [{},{},{},{},{},{},{},{},{},{}],
+    "sezona 9": [{},{},{},{},{},{},{},{},{},{}]
+  }
+}

@@ -1,0 +1,78 @@
+@import '../../Colors.scss';
+
+.Menu {
+    background:$background;
+    width: 370px;
+    height: 100%;
+    transition:width .2s;
+    overflow: hidden;
+    z-index: 100;
+
+    .logo{
+        display: -webkit-flex;
+        justify-content: center;
+    }
+
+    .nav-item{
+        display: -webkit-flex;
+        align-items: center;
+        width: 310px;
+        height: 69px;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+
+        img{
+            margin-left: 19px;
+            margin-right: 26px;
+        }
+
+        &.active{
+            background:$side;
+        }
+    }
+
+    &.close{
+        width:95px;
+
+        .logo{
+            visibility: hidden;
+        }
+
+        .nav-item{
+            p{
+                opacity: 0;
+            }
+        }
+    }   
+}
+
+@media (max-width:1280px){
+    .Menu {
+        width: 250px;
+
+        .logo{
+
+            img{
+                width: 200px;
+            }
+        }
+
+        .nav-item{
+            height: 50px;
+            margin-bottom: 40px;
+            font-size: 17px;
+
+            img{
+                width: 38px;
+                margin-left:12px;
+                margin-right: 15px;
+            }
+        }
+
+        &.close{
+            width: 70px;
+        }
+    }
+}

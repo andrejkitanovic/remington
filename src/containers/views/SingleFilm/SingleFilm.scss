@@ -1,0 +1,33 @@
+.SingleFilm,.SingleSerie {
+    height: 100%;
+
+    .wallpaper{
+        background: no-repeat center center;
+        background-size: cover;
+        opacity: 0.3;
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        right: 0;
+        z-index: -10;
+  
+
+        &:after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 70%);
+            bottom:0;
+            box-shadow: inset 1px -20px 20px 20px white;
+        }
+    }
+
+    .container{
+        position: relative;
+        width: 1700px;
+        margin:0 auto;
+        transition: .2s;
+        z-index: -1;
+    }
+}

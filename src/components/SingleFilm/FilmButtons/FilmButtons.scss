@@ -1,0 +1,29 @@
+.FilmButtons {
+  display: -webkit-flex;
+  color: #63738a;
+  margin-top: 27px;
+
+  div {
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    width: 205px;
+    border: 2px solid #63738a;
+    height: 45px;
+    border-radius: 5px;
+    margin-right: 30px;
+    font-size: 20px;
+    font-weight: 600;
+
+    &.active{
+        background:#63738a;
+        color:#fff;
+    }
+
+    svg{
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+  }
+}

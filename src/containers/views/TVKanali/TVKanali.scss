@@ -1,0 +1,12 @@
+@import "../../../Colors.scss";
+
+.TVKanali {
+    display: -webkit-flex;
+    float: right;
+
+    .mover{
+        position: relative;
+        transition: .2s;
+        z-index: -1;
+    }
+}

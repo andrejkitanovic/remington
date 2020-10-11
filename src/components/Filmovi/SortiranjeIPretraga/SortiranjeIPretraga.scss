@@ -1,0 +1,26 @@
+@import '../../../Colors.scss';
+
+.SortiranjeIPretraga{
+    display: -webkit-flex;
+    margin-top: 60px;
+
+    div{
+        display: -webkit-flex;
+        align-items: center;
+        justify-content: center;
+        width: 280px;
+        height: 55px;
+        margin-right: 29px;
+        color:$main;
+        border:2px solid $main;
+        font-size: 18px;
+        box-shadow: 0px 4px 10px 0px #00000030;
+        border-radius: 3px;
+
+        &.active {
+            background:$main;
+            border-color: $text;
+            color:$text;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.TVKanaliPocetna{
+    position: relative;
+    height: 167px;
+    background:white;
+    display: -webkit-flex;
+    align-items: center;
+    transition:.2s;
+    padding-left: 50px;
+
+    .Kanal {
+        min-width: 150px!important;
+        margin-right: 31px;
+
+        img{
+            width: 120px;
+        }
+    }
+}

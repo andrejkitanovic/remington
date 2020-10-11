@@ -1,0 +1,10 @@
+{
+  "img": "https://images-na.ssl-images-amazon.com/images/I/71mOQV8-GzL._AC_SL1007_.jpg",
+  "banner": "https://images7.alphacoders.com/526/thumb-1920-526236.jpg",
+  "name": "Hobbit",
+  "rating": 4.3,
+  "year": 2020,
+  "category": ["Akcioni", "Drama", "Triler"],
+  "duration" : 120,
+  "description": "Lorem Lorem Ipsum is simply dummy text of the printing and typesettingr since the 1500s, when an unknown printer took a galley of.  Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. Lorem Ipsum."
+}

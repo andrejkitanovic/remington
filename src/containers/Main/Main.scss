@@ -1,0 +1,23 @@
+.Main{
+    display:-webkit-flex;
+    height: 100%;
+
+
+    .view{
+        width: 100%;
+        overflow: hidden;
+
+        .header{
+            background:url('../../assets/Layout/header.png')no-repeat top right;
+            height:137px;
+            overflow: hidden;
+            z-index: 0;
+        }
+    }
+}
+
+@media (max-width:1281px){
+    // .Main .view .header{
+        // height: 80px;
+    // }
+}
