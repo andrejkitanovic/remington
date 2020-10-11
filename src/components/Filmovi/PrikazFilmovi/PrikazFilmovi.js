@@ -40,6 +40,7 @@ const prikazFilmovi = (props) => {
             <div className="zanr">
                 <div className="rating">
                     <p>{film.year}</p>
+                    <div className="stars" style={{'--stars':3.4}}></div>
                 </div>
                 <p>{film.category.join(", ")}</p>
             </div>
