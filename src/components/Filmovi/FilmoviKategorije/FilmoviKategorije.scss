@@ -4,13 +4,13 @@
   position: relative;
   min-width: 575px;
   margin-top: 50px;
-  z-index: -1;
+  z-index: 0;
   transition:.2s;
 
   .Kategorija {
     width: 515px;
     height: 77px;
-    background: #f0f0f0;
+    background: #4a4a4a;
     margin: 0 auto;
     box-sizing: border-box;
     margin-bottom: 25px;
@@ -21,7 +21,7 @@
       padding-top: 16px;
       font-size: 20px;
       text-transform: uppercase;
-      color: #6f6f6f;
+      color: $text;
       padding-left: 20px;
       padding-right: 20px;
       box-sizing: border-box;
@@ -30,19 +30,15 @@
     p {
       font-size: 17px;
       width: 100%;
-      background: #a8a8a8;
+      background: $elements;
       padding: 5px 20px;
       box-sizing: border-box;
     }
 
     &.active {
-      background: $side;
-      h3 {
-        color: $text;
-      }
-
+      background: $light;
       p {
-        background: $light;
+        background: $main;
       }
     }
   }

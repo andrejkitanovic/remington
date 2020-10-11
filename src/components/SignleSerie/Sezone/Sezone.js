@@ -2,20 +2,20 @@ import React from "react";
 import "./Sezone.scss";
 
 const sezone = (props) => {
-  const sezoneList = Object.keys(props.sezone).map((sezona, index) => (
+  const sezoneList = Object.keys(props.sezone).map((sezona, indexRow) => (
     <React.Fragment>
-      <div className={"row" + (props.active === index + 1 ? " active" : "")}>
+      <div className={"row" + (props.active === indexRow + 1 ? " active" : "")}>
         {sezona}
       </div>
       <div
         className="container"
         style={{
-          right: props.active === index + 1 && props.position * 248 + "px",
+          right: props.active === indexRow + 1 && props.position * 248 + "px",
         }}
       >
-        {props.sezone[sezona].map((epg) => (
+        {props.sezone[sezona].map((epg,index) => (
           <div
-            className="Serie"
+            className={"Serie" + (props.active === indexRow + 1&& props.position === index ? " active" : "")}
             style={{ backgroundImage: `url(${props.img})` }}
           ></div>
         ))}

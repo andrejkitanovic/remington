@@ -3,7 +3,7 @@ import "./Kategorije.scss";
 
 const kategorije = (props) => {
   const kategorijeLista = props.kategorije.map((kategorija, index) => (
-    <div className={"Kategorija" + (props.position === index ? " active" : "")} style={{fontSize:props.active === index && "24px"}}>
+    <div className={"Kategorija" + (props.position === index ? " active" : "")}>
       {kategorija}
     </div>
   ));

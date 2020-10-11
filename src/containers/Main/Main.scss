@@ -6,12 +6,14 @@
     .view{
         width: 100%;
         overflow: hidden;
+        background: radial-gradient(29.26% 29.26% at 50% 56.06%, #481251 0%, #1D1D1D 100%);
 
         .header{
+            position: sticky;
             background:url('../../assets/Layout/header.png')no-repeat top right;
             height:137px;
             overflow: hidden;
-            z-index: 0;
+            z-index: 100;
         }
     }
 }

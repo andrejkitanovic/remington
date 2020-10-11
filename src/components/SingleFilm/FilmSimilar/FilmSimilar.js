@@ -2,8 +2,8 @@ import React from "react";
 import "./FilmSimilar.scss";
 
 const filmSimilar = (props) => {
-  const movies = props.movies.map((movie) => (
-    <div className="Movie" style={{ backgroundImage: `url(${movie.img})` }}></div>
+  const movies = props.movies.map((movie,index) => (
+    <div className={"Movie" + (props.active && props.position === index ? " active" : "")} style={{ backgroundImage: `url(${movie.img})` }}></div>
   ));
 
   return (

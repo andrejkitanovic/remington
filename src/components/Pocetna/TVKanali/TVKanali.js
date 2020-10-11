@@ -4,9 +4,9 @@ import './TVKanali.scss'
 import Kanal from '../../../assets/Delete/kanal.png'
 
 const tvKanali = props => {
-    const kanali = props.kanali.map((kanal) => <div className="Kanal"><img src={Kanal} alt="Kanal"/></div>)
+    const kanali = props.kanali.map((kanal,index) => <div className={"Kanal" + (props.position === index ? " active" : "")}><div style={{backgroundImage:`url(${Kanal})`}}/></div>)
 
-    return <div className="TVKanaliPocetna" style={{right:props.position * 181 + "px"}}>
+    return <div className="TVKanaliPocetna" style={{right:props.position * 194 + "px"}}>
         {kanali}
     </div>
 }

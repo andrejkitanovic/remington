@@ -33,7 +33,7 @@
                 bottom: 0;
                 width: 100%;
                 height: 0;
-                background:$main;
+                background:$light;
                 transition: .2s;
 
 
@@ -48,11 +48,33 @@
                     padding:7px 16px;
                     box-sizing: border-box;
                     height: 59px;
-                    background:$light;
+                    background:$main;
 
-                    .rating p{
-                        font-size: 17px;
+                    .rating {
+                        display: -webkit-flex;
+                        align-items: center;
+                        justify-content: space-between;
                         margin-bottom: 8px;
+                        
+
+                        p{
+                            font-size: 17px;
+                        }
+
+                        .stars{
+                            --percent: calc( var(--stars) / 5 * 100%);
+                            display: inline-block;
+                            font-family: Times; // make sure ★ appears correctly
+                            line-height: 1;
+                            
+                            &::before {
+                              content: '★★★★★';
+                              letter-spacing: 3px;
+                              background: linear-gradient(90deg, #EAEF05 var(--percent), white var(--percent));
+                              -webkit-background-clip: text;
+                              -webkit-text-fill-color: transparent;
+                            }
+                        }
                     }
 
                     p{

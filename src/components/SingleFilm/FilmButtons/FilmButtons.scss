@@ -1,6 +1,10 @@
+@import '../../../Colors.scss';
+
 .FilmButtons {
   display: -webkit-flex;
-  color: #63738a;
+  color: $text;
+  width: 1700px;
+  margin: 0 auto;
   margin-top: 27px;
 
   div {
@@ -8,19 +12,20 @@
     align-items: center;
     justify-content: center;
     width: 205px;
-    border: 2px solid #63738a;
+    border: 2px solid transparent;
     height: 45px;
     border-radius: 5px;
     margin-right: 30px;
     font-size: 20px;
     font-weight: 600;
+    background:$elements;
+    border-radius: 50px;
 
-    &.active{
-        background:#63738a;
-        color:#fff;
+    &.active {
+      border: 2px solid $text;
     }
 
-    svg{
+    svg {
       width: 30px;
       height: 30px;
       margin-right: 10px;

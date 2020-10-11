@@ -1,18 +1,33 @@
+@import '../../../Colors.scss';
+
 .TVKanaliPocetna{
     position: relative;
     height: 167px;
-    background:white;
     display: -webkit-flex;
     align-items: center;
     transition:.2s;
     padding-left: 50px;
+    z-index: 0;
 
     .Kanal {
-        min-width: 150px!important;
-        margin-right: 31px;
+        display:-webkit-flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 185px;
+        height: 113px;
+        border-radius: 30px;
+        border:4px solid transparent;
 
-        img{
-            width: 120px;
+        &.active{
+            border:4px solid $light;
+            background:$elements;
+        }
+
+        div{
+            width: 60%;
+            height: 60%;
+            background:no-repeat center center;
+            background-size: cover;
         }
     }
 }

@@ -118,19 +118,19 @@ const Pocetna = (props) => {
         <p>TV Kanali</p>
       </div>
 
-      <TVKanali kanali={kanaliData} position={positionChannel} />
+      <TVKanali kanali={kanaliData} position={column === 0 && positionChannel} />
 
       <div className={"row" + (column === 1 ? " active" : "")}>
         <p>Novi filmovi</p>
       </div>
 
-      <ListaFilmova filmovi={filmoviData} position={positionMovie} />
+      <ListaFilmova filmovi={filmoviData} position={column === 1 && positionMovie} />
 
       <div className={"row" + (column === 2 ? " active" : "")}>
         <p>Nove serije</p>
       </div>
 
-      <ListaFilmova filmovi={serijeData} position={positionSerie} />
+      <ListaFilmova filmovi={serijeData} position={column === 2 && positionSerie} />
     </div>
   );
 };

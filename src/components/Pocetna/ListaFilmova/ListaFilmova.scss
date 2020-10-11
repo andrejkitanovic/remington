@@ -1,18 +1,25 @@
+@import '../../../Colors.scss';
+
 .ListaFilmovaPocetna{
     position: relative;
     height: 400px;
-    background:white;
     display: -webkit-flex;
     align-items: center;
     transition:.2s;
-    margin-left: 20px;
+    margin-left: 25px;
 
     .Film {
         min-width: 217px;
         height: 322px;
-        margin-right: 31px;
+        margin-right: 26px;
         border-radius: 5px;
         background:no-repeat center center;
         background-size: cover;
+        border: 5px solid transparent;
+        box-sizing: border-box;
+
+        &.active{
+            border: 5px solid $light;
+        }
     }
 }
