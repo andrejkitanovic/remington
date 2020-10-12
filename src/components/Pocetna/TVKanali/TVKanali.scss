@@ -1,13 +1,16 @@
 @import '../../../Colors.scss';
 
 .TVKanaliPocetna{
-    position: relative;
+    position: fixed;
     height: 167px;
+    width: 100%;
     display: -webkit-flex;
     align-items: center;
     -webkit-transition:.1s;
-    padding-left: 50px;
-    z-index: 0;
+
+
+    // box-sizing: border-box;
+    // z-index:100;
 
     .Kanal {
         display:-webkit-flex;

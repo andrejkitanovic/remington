@@ -113,22 +113,22 @@ const Pocetna = (props) => {
   });
 
   return (
-    <div className={"Pocetna" + (column === 2 ? " padding" : "")}>
+    <div className={"Pocetna" + (props.active ? " active" : "")}>
       <div className={"row" + (column === 0 ? " active" : "")}>
         <p>TV Kanali</p>
       </div>
 
-      {/* <TVKanali kanali={kanaliData} position={column === 0 && positionChannel} /> */}
+      <TVKanali kanali={kanaliData} position={column === 0 && positionChannel} />
 
-      <div className={"row" + (column === 1 ? " active" : "")}>
+      {/* <div className={"row" + (column === 1 ? " active" : "")}>
         <p>Novi filmovi</p>
-      </div>
+      </div> */}
 
       {/* <ListaFilmova filmovi={filmoviData} position={column === 1 && positionMovie} /> */}
 
-      <div className={"row" + (column === 2 ? " active" : "")}>
+      {/* <div className={"row" + (column === 2 ? " active" : "")}>
         <p>Nove serije</p>
-      </div>
+      </div> */}
 
       {/* <ListaFilmova filmovi={serijeData} position={column === 2 && positionSerie} /> */}
     </div>

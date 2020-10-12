@@ -5,10 +5,15 @@
   width: 100%;
   top:30px;
   -webkit-transition:top 0.1s;
-  z-index: 0;
-  padding-left: 360px;
+  padding-left: 375px;
   top:167px;
   box-sizing: border-box;
+  transition: .2s;
+  overflow: hidden;
+
+  &.active{
+    padding-left: 95px;
+  }
 
   &.padding{
       top:-170px;
