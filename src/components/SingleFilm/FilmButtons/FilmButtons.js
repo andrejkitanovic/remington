@@ -43,7 +43,7 @@ const filmButtons = (props) => {
     );
   }
 
-  return <div className="FilmButtons">{buttons}</div>;
+  return <div className={"FilmButtons" + (props.show ? " show" : "")}>{buttons}</div>;
 };
 
 export default filmButtons;

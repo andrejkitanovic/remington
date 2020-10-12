@@ -2,8 +2,15 @@
 
 .Sezone {
   width: 100%;
-  margin-top: 49px;
+  // margin-top: 49px;
   overflow: hidden;
+  position: relative;
+
+  .sezona{
+    width: 100%;
+    position: relative;
+    transition: .2s;
+  }
 
   .row {
     position: relative;

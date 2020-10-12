@@ -23,7 +23,9 @@ const sezone = (props) => {
     </React.Fragment>
   ));
 
-  return <div className="Sezone">{sezoneList}</div>;
+  return <div className="Sezone">
+    <div className="sezona"  style={{bottom:props.active > 0 && (props.active-1) * 448 + "px"}}>
+    {sezoneList} </div></div>;
 };
 
 export default sezone;
