@@ -1,11 +1,14 @@
 @import '../../../Colors.scss';
 
 .Pocetna {
-  position: relative;
+  position: absolute;
   width: 100%;
   top:30px;
   -webkit-transition:top 0.1s;
   z-index: 0;
+  padding-left: 360px;
+  top:167px;
+  box-sizing: border-box;
 
   &.padding{
       top:-170px;

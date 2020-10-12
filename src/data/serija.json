@@ -1,6 +1,7 @@
 {
   "img": "https://d3fa68hw0m2vcc.cloudfront.net/672/115375466.jpeg",
   "banner": "https://i2.wp.com/redanianintelligence.com/wp-content/uploads/2019/11/witcherposter-Copy.jpg?fit=1084%2C767&ssl=1",
+  "src": "",
   "name": "The Witcher",
   "rating": 2.5,
   "year": 2020,
@@ -8,14 +9,17 @@
   "duration": 60,
   "description": "Lorem Lorem Ipsum is simply dummy text of the printing and typesettingr since the 1500s, when an unknown printer took a galley of.  Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. Lorem Ipsum.",
   "sezone": {
-    "sezona 1": [{},{},{},{},{}],
-    "sezona 2": [{},{},{},{},{},{},{},{},{},{}],
-    "sezona 3": [{},{},{},{},{}],
-    "sezona 4": [{},{},{},{},{}],
-    "sezona 5": [{},{},{},{},{},{},{},{},{},{}],
-    "sezona 6": [{},{},{},{},{}],
-    "sezona 7": [{},{},{},{},{}],
-    "sezona 8": [{},{},{},{},{},{},{},{},{},{}],
-    "sezona 9": [{},{},{},{},{},{},{},{},{},{}]
+    "season 1": [{
+      "name":"The Witcher S01 E01",
+      "src": ""
+    },{},{},{},{}],
+    "season 2": [{},{},{},{},{},{},{},{},{},{}],
+    "season 3": [{},{},{},{},{}],
+    "season 4": [{},{},{},{},{}],
+    "season 5": [{},{},{},{},{},{},{},{},{},{}],
+    "season 6": [{},{},{},{},{}],
+    "season 7": [{},{},{},{},{}],
+    "season 8": [{},{},{},{},{},{},{},{},{},{}],
+    "season 9": [{},{},{},{},{},{},{},{},{},{}]
   }
 }
