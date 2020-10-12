@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dist": "webpack --mode=development"
+    "dist": "webpack --mode=production"
   },
   "eslintConfig": {
     "extends": "react-app"

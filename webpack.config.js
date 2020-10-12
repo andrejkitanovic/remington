@@ -7,8 +7,8 @@ const htmlPlugin = new HtmlWebPackPlugin({
 
 module.exports = {
   entry: "./src/index.js",
-  mode: 'development',
-  devtool: 'cheap-module-eval-source-map',
+  // mode: 'development',
+  // devtool: 'cheap-module-eval-source-map',
   module: {
     rules: [
       {
