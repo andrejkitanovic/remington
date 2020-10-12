@@ -3,7 +3,7 @@
 .PrikazFilmovi {
     position: relative;
     margin-top: 20px;
-    transition:.1s;
+    -webkit-transition:.1s;
 
     .prikaz{
         display: -webkit-flex;
@@ -34,7 +34,7 @@
                 width: 100%;
                 height: 0;
                 background:$light;
-                transition: .1s;
+                -webkit-transition: .1s;
 
 
                 h5{

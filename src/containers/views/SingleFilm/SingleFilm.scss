@@ -27,7 +27,7 @@
     .container{
         position: relative;
         margin:0 auto;
-        transition: .1s;
+        -webkit-transition: .1s;
         z-index: 1;
         bottom:0;
     }

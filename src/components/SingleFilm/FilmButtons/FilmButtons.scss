@@ -6,7 +6,7 @@
   width: 1700px;
   margin: 0 auto;
   margin-top: 27px;
-  transition:  all .1s, opacity .1s;
+  -webkit-transition:  all .1s, opacity .1s;
   margin-bottom: 49px;
 
   &.show{

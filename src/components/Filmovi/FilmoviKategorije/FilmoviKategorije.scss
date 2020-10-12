@@ -5,7 +5,7 @@
   min-width: 575px;
   margin-top: 50px;
   z-index: 0;
-  transition:.1s;
+  -webkit-transition:.1s;
 
   .Kategorija {
     width: 515px;
@@ -14,7 +14,7 @@
     margin: 0 auto;
     box-sizing: border-box;
     margin-bottom: 25px;
-    transition: .1s;
+    -webkit-transition: .1s;
 
     h3 {
       margin: 0;
