@@ -9,7 +9,7 @@ const listaFilmova = (props) => {
   return (
     <div
       className="ListaFilmovaPocetna"
-      style={{ right: props.position * 245 + "px" }}
+      style={{ left: props.position * -245 + 100 + "px" }}
     >
       {filmovi}
     </div>

@@ -5,22 +5,30 @@
   width: 100%;
   top:30px;
   -webkit-transition:top 0.1s;
-  padding-left: 375px;
+  // padding-left: 375px;
   top:167px;
   box-sizing: border-box;
   transition: .2s;
-  overflow: hidden;
+  // overflow: hidden;
 
-  &.active{
-    padding-left: 95px;
-  }
 
   &.padding{
       top:-170px;
   }
 
+  
+  &.active{
+    padding-left: 95px;
+
+    .row{
+      left:95px;
+    }
+  }
+
   .row {
-    position: relative;
+    position: absolute;
+    left:370px;
+    top:0;
     display: -webkit-flex;
     align-items: center;
     height: 49px;
@@ -31,6 +39,7 @@
     z-index: 10;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
+    transition: .2s;
 
 
     p {
@@ -39,6 +48,10 @@
       font-size: 23px;
       letter-spacing: 10%;
       font-weight: 600;
+    }
+
+    &.two{
+      top:250px!important;
     }
   }
 }

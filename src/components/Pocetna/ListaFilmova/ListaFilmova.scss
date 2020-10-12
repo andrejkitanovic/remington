@@ -1,12 +1,13 @@
 @import '../../../Colors.scss';
 
 .ListaFilmovaPocetna{
-    position: relative;
+    position: fixed;
     height: 400px;
     display: -webkit-flex;
     align-items: center;
     -webkit-transition:.1s;
     margin-left: 25px;
+    top:480px;
 
     .Film {
         min-width: 217px;

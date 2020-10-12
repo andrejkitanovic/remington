@@ -114,17 +114,17 @@ const Pocetna = (props) => {
 
   return (
     <div className={"Pocetna" + (props.active ? " active" : "")}>
-      <div className={"row" + (column === 0 ? " active" : "")}>
+      <div className="row">
         <p>TV Kanali</p>
       </div>
 
       <TVKanali kanali={kanaliData} position={column === 0 && positionChannel} />
 
-      {/* <div className={"row" + (column === 1 ? " active" : "")}>
+      <div className="row two">
         <p>Novi filmovi</p>
-      </div> */}
+      </div>
 
-      {/* <ListaFilmova filmovi={filmoviData} position={column === 1 && positionMovie} /> */}
+      <ListaFilmova filmovi={filmoviData} position={column === 1 && positionMovie} />
 
       {/* <div className={"row" + (column === 2 ? " active" : "")}>
         <p>Nove serije</p>

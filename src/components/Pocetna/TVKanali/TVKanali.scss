@@ -2,15 +2,12 @@
 
 .TVKanaliPocetna{
     position: fixed;
+    top:230px;
     height: 167px;
     width: 100%;
     display: -webkit-flex;
     align-items: center;
     -webkit-transition:.1s;
-
-
-    // box-sizing: border-box;
-    // z-index:100;
 
     .Kanal {
         display:-webkit-flex;
