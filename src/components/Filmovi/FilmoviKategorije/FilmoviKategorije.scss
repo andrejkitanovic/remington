@@ -5,7 +5,7 @@
   left:410px;
   top:185px;
   z-index: 0;
-  -webkit-transition:.2s;
+  -webkit-transition:.3s;
 
   .Kategorija {
     width: 515px;
@@ -14,8 +14,9 @@
     margin: 0 auto;
     box-sizing: border-box;
     margin-bottom: 25px;
-    -webkit-transition: .1s;
+    -webkit-transition: .3s;
 
+    // text-align: center;
     h3 {
       margin: 0;
       padding-top: 16px;

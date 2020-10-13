@@ -113,7 +113,7 @@ const Pocetna = (props) => {
   });
 
   return (
-    <div className={"Pocetna" + (props.active ? " active" : "")}>
+    <div className="Pocetna active">
       <div className={"row" + (column === 2 ? " translate" : "")}>
         <p>TV Kanali</p>
       </div>
