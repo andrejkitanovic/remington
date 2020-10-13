@@ -58,6 +58,7 @@ const Login = (props) => {
               setStep(0);
             }
           }
+          break;
         default:
           break;
       }

@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./Main.scss";
 
-import Utility from "../../utility/Keys";
-
 import Menu from "../Menu/Menu";
+import {withRouter} from 'react-router-dom'
+
 
 const Main = (props) => {
 
-  
+  useEffect(() => {
+    localStorage.getItem('jwToken') ? props.history.push('/home') : props.history.push('/login')
+  },[])
+
   return (
     <div className="Main">
       <Menu open={props.menu}/>
@@ -20,4 +23,4 @@ const Main = (props) => {
   );
 };
 
-export default Main;
+export default withRouter(Main);

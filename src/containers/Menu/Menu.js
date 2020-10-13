@@ -11,8 +11,11 @@ import Radio from '../../assets/Layout/radio.png'
 import Podesavanja from '../../assets/Layout/podesavanja.png'
 
 import { withRouter } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 import Utility from '../../utility/Keys'
+
+import { toggleMenu } from '../../store/actions/menu'
 
 const Menu = (props) => {
   const [column, setColumn] = useState(0)
@@ -21,21 +24,26 @@ const Menu = (props) => {
     const enter = () => {
       switch (column) {
         case 0:
+          props.toggleMenu(false)
           props.history.push('/home')
           break
         case 1:
+          props.toggleMenu(false)
           props.history.push('/tv-kanali')
           break
         case 2:
+          props.toggleMenu(false)
           props.history.push('/filmovi')
           break
         case 3:
+          props.toggleMenu(false)
           props.history.push('/serije')
-          break;
+          break
         default:
           break
       }
     }
+
     const keyHandler = (e) => {
       switch (e.keyCode) {
         case Utility.down:
@@ -47,24 +55,23 @@ const Menu = (props) => {
         case Utility.enter:
           enter()
           break
+        case Utility.right:
+          enter()
+          break
         default:
           break
       }
     }
 
-    if (props.open) {
+    if (props.menu) {
       document.addEventListener('keydown', keyHandler)
     } else document.removeEventListener('keydown', keyHandler)
 
     return () => document.removeEventListener('keydown', keyHandler)
   }, [column, props])
 
-  // useEffect(() => {
-  // props.screen(column)
-  // },[column,props])
-
   return (
-    <div className={'Menu' + (!props.open ? ' close' : '')}>
+    <div className={'Menu' + (!props.menu ? ' close' : '')}>
       <div className="logo">
         <img src={Logo} alt="MaxiTV" />
       </div>
@@ -102,4 +109,10 @@ const Menu = (props) => {
   )
 }
 
-export default withRouter(Menu)
+const mapStateToProps = (state) => {
+  return {
+    menu: state.menu.menu,
+  }
+}
+
+export default connect(mapStateToProps, { toggleMenu })(withRouter(Menu))

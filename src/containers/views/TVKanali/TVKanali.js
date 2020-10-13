@@ -11,6 +11,9 @@ import EPGLista from "../../../components/TVKanali/EPGLista/EPGLista";
 
 import kateogrijeData from "../../../data/kanaliKategorije.json";
 
+import {connect} from 'react-redux'
+import {toggleMenu} from '../../../store/actions/menu'
+
 const TVKanali = (props) => {
   const [column, setColumn] = useState(0);
   const [kategorija, setKategorija] = useState(0);
@@ -40,7 +43,7 @@ const TVKanali = (props) => {
     const left = () => {
       switch (column) {
         case 0:
-          props.exit();
+          props.toggleMenu(true);
           break;
         case 1:
           setColumn(0);
@@ -115,7 +118,7 @@ const TVKanali = (props) => {
       }
     };
 
-    if (props.active) {
+    if (!props.menu) {
       document.addEventListener("keydown", keyHandler);
     } else document.removeEventListener("keydown", keyHandler);
 
@@ -153,4 +156,10 @@ const TVKanali = (props) => {
   );
 };
 
-export default TVKanali;
+const mapStateToProps = state => {
+  return {
+    menu:state.menu.menu
+  }
+}
+
+export default connect(mapStateToProps,{toggleMenu})(TVKanali);

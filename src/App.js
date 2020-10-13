@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './App.scss'
 
 import Login from './containers/Login/Login'
@@ -9,19 +9,21 @@ import TVKanali from './containers/views/TVKanali/TVKanali'
 import Filmovi from './containers/views/Filmovi/Filmovi'
 import Serije from './containers/views/Serije/Serije'
 
+import SingleFilm from './containers/views/SingleFilm/SingleFilm'
 
+import SingleSerie from './containers/views/SingleSerie/SingleSerie'
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 function App() {
-  const [menu,setMenu] = useState(true);
-
   return (
     <div className="App">
       <BrowserRouter>
         <Switch>
-          <Route path="/" exact component={Login} />
-          <Main menu={menu}>
+          <Route path="/login" component={Login} />
+          <Main>
+            <Route path="/film/:id" component={SingleFilm} />
+            <Route path="/serija/:id" component={SingleSerie} />
             <Route path="/home" component={Pocetna} />
             <Route path="/tv-kanali" component={TVKanali} />
             <Route path="/filmovi" component={Filmovi} />

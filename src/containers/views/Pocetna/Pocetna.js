@@ -10,6 +10,9 @@ import kanaliData from "../../../data/kanali.json";
 import filmoviData from "../../../data/filmovi.json";
 import serijeData from "../../../data/serije.json";
 
+import {connect} from 'react-redux'
+import {toggleMenu} from '../../../store/actions/menu'
+
 const Pocetna = (props) => {
   const [column, setColumn] = useState(0);
   const [positionChannel, setPositionChannel] = useState(0);
@@ -20,13 +23,13 @@ const Pocetna = (props) => {
     const left = () => {
       switch (column) {
         case 0:
-          positionChannel > 0 ? setPositionChannel((p) => p - 1) : props.exit();
+          positionChannel > 0 ? setPositionChannel((p) => p - 1) : props.toggleMenu(true);
           break;
         case 1:
-          positionMovie > 0 ? setPositionMovie((p) => p - 1) : props.exit();
+          positionMovie > 0 ? setPositionMovie((p) => p - 1) : props.toggleMenu(true);
           break;
         case 2:
-          positionSerie > 0 ? setPositionSerie((p) => p - 1) : props.exit();
+          positionSerie > 0 ? setPositionSerie((p) => p - 1) : props.toggleMenu(true);
           break;
         default:
           break;
@@ -73,10 +76,10 @@ const Pocetna = (props) => {
     const enter = () => {
       switch (column) {
         case 1:
-          props.playMovie(null, 0);
+          props.history.push(`/film/${5}`);
           break;
         case 2:
-          props.playSerie(null, 0);
+          props.history.push(`/serija/${5}`);
           break;
         default:
           break;
@@ -105,7 +108,7 @@ const Pocetna = (props) => {
       }
     };
 
-    if (props.active) {
+    if (!props.menu) {
       document.addEventListener("keydown", keyHandler);
     } else document.removeEventListener("keydown", keyHandler);
 
@@ -148,4 +151,10 @@ const Pocetna = (props) => {
   );
 };
 
-export default Pocetna;
+const mapStateToProps = state => {
+  return {
+    menu:state.menu.menu
+  }
+}
+
+export default connect(mapStateToProps,{toggleMenu})(Pocetna);

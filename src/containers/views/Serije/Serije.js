@@ -11,6 +11,9 @@ import PrikazFilmovi from "../../../components/Filmovi/PrikazFilmovi/PrikazFilmo
 import kategorijeData from "../../../data/serijeKategorije.json";
 import serijeData from "../../../data/serije.json";
 
+import {connect} from 'react-redux'
+import {toggleMenu} from '../../../store/actions/menu'
+
 const Serije = (props) => {
   const [sort, setSort] = useState(true);
 
@@ -76,7 +79,7 @@ const Serije = (props) => {
     const left = () => {
       switch (column) {
         case 0:
-          props.exit();
+          props.toggleMenu(true);
           break;
         case 1:
           if (mainRow === 0) {
@@ -128,7 +131,8 @@ const Serije = (props) => {
       switch (column) {
         case 1:
           if (mainRow === 2 || mainRow === 3) {
-            props.playSerie(null, 3);
+            // props.playSerie(null, 3);
+            props.history.push(`/serija/${5}`)
           }
           break;
         default:
@@ -158,7 +162,7 @@ const Serije = (props) => {
       }
     };
 
-    if (props.active) {
+    if (!props.menu) {
       document.addEventListener("keydown", keyHandler);
     } else document.removeEventListener("keydown", keyHandler);
 
@@ -190,4 +194,11 @@ const Serije = (props) => {
   );
 };
 
-export default Serije;
+const mapStateToProps = state => {
+  return {
+    menu:state.menu.menu
+  }
+}
+
+
+export default connect(mapStateToProps,{toggleMenu})(Serije);

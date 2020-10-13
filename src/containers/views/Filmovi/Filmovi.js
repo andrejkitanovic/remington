@@ -11,6 +11,9 @@ import PrikazFilmovi from "../../../components/Filmovi/PrikazFilmovi/PrikazFilmo
 import kategorijeData from "../../../data/filmoviKategorije.json";
 import filmoviData from "../../../data/filmovi.json";
 
+import {connect} from 'react-redux'
+import {toggleMenu} from '../../../store/actions/menu'
+
 const Filmovi = (props) => {
   const [sort, setSort] = useState(true);
 
@@ -76,7 +79,7 @@ const Filmovi = (props) => {
     const left = () => {
       switch (column) {
         case 0:
-          props.exit();
+          props.toggleMenu(true);
           break;
         case 1:
           if (mainRow === 0) {
@@ -128,7 +131,7 @@ const Filmovi = (props) => {
       switch (column) {
         case 1:
           if (mainRow === 2 || mainRow === 3) {
-            props.playMovie(null, 2);
+            props.history.push(`/film/${5}`);
           }
           break;
         default:
@@ -158,22 +161,12 @@ const Filmovi = (props) => {
       }
     };
 
-    if (props.active) {
+    if (!props.menu) {
       document.addEventListener("keydown", keyHandler);
     } else document.removeEventListener("keydown", keyHandler);
 
     return () => document.removeEventListener("keydown", keyHandler);
-  }, [
-    props.active,
-    props,
-    activeCategory,
-    column,
-    mainRow,
-    sortSearch,
-    sortPosition,
-    sort,
-    moviePosition,
-  ]);
+  });
 
   return (
     <div className="Filmovi active">
@@ -202,4 +195,10 @@ const Filmovi = (props) => {
   );
 };
 
-export default Filmovi;
+const mapStateToProps = state => {
+  return {
+    menu:state.menu.menu
+  }
+}
+
+export default connect(mapStateToProps,{toggleMenu})(Filmovi);
