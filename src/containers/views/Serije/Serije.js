@@ -131,7 +131,6 @@ const Serije = (props) => {
       switch (column) {
         case 1:
           if (mainRow === 2 || mainRow === 3) {
-            // props.playSerie(null, 3);
             props.history.push(`/serija/${5}`)
           }
           break;
