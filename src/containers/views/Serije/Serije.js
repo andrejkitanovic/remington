@@ -166,7 +166,7 @@ const Serije = (props) => {
   });
 
   return (
-    <div className="Filmovi">
+    <div className={"Filmovi" + (props.active ? " active" : "")}>
       <FilmoviKategorije
         kategorije={kategorijeData}
         active={column === 0 && activeCategory}

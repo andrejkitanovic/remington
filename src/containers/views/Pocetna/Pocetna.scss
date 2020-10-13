@@ -4,24 +4,27 @@
   position: absolute;
   width: 100%;
   top:30px;
-  -webkit-transition:top 0.1s;
-  // padding-left: 375px;
   top:167px;
   box-sizing: border-box;
   transition: .2s;
-  // overflow: hidden;
-
 
   &.padding{
       top:-170px;
   }
-
   
   &.active{
     padding-left: 95px;
 
     .row{
       left:95px;
+    }
+
+    .TVKanaliPocetna{
+      left:150px;
+    }
+
+    .ListaFilmovaPocetna{
+      left: 130px;
     }
   }
 
@@ -52,6 +55,14 @@
 
     &.two{
       top:250px!important;
+    }
+
+    &.three{
+      top:700px!important;
+    }
+
+    &.translate{
+      transform: translateY(-250px);
     }
   }
 }

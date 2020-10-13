@@ -15,7 +15,7 @@ const kanali = (props) => {
   ));
 
   return <div className="Kanali" 
-  style={{bottom: props.position && props.position * 97 + "px"}}
+  style={{transform:`translateY(${props.position && props.position * -102.5}px)`}}
   >{kanaliLista}</div>;
 };
 

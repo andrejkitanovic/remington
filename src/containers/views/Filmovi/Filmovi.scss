@@ -1,9 +1,30 @@
 .Filmovi {
+    position: absolute;
+    left: 350px;
     display: -webkit-flex;
+    transition:.2s;
+
+    &.active{
+        left: 95px;
+
+        .FimoviKateogirje{
+            left:130px;
+        }
+
+        .SortiranjeIPretraga{
+            right: 600px;
+        }
+
+        .Sort{
+            right: 0;
+        }
+
+        .PrikazFilmovi{
+            left:700px;
+        }
+    }
+    
     .main {
-        overflow: hidden;
-        width: 100%;
-        margin-right: 50px;
         overflow: hidden;
     }
 }

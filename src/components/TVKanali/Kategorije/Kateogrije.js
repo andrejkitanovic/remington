@@ -3,7 +3,7 @@ import "./Kategorije.scss";
 
 const kategorije = (props) => {
   const kategorijeLista = props.kategorije.map((kategorija, index) => (
-    <div className={"Kategorija" + (props.position === index ? " active" : "")}>
+    <div className={"Kategorija" + (props.position === index ? " active" : "")} style={{top:index * 60 + "px"}}>
       {kategorija}
     </div>
   ));
@@ -13,7 +13,7 @@ const kategorije = (props) => {
       className="KategorijeTVKanali"
      
     >
-      <div className="container"  style={{ bottom: props.position > 16 ? (props.position - 16) * 60 + "px" : "0px" }}>{kategorijeLista}</div>
+      <div className="container"  style={{ transform: `translateY(${props.position > 16 ? (props.position - 16) * -60 : 0}px)`}}>{kategorijeLista}</div>
     </div>
   );
 };

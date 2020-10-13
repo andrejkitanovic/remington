@@ -8,8 +8,8 @@ const listaFilmova = (props) => {
 
   return (
     <div
-      className="ListaFilmovaPocetna"
-      style={{ left: props.position * -245 + 100 + "px" }}
+      className={"ListaFilmovaPocetna" + (props.second ? " two" : "") + (props.translate ? " translate" : "")} 
+      style={{transform:`translateX(${props.position * -250}px) translateY(${props.translate ? -250 : 0}px)`}} 
     >
       {filmovi}
     </div>

@@ -1,17 +1,15 @@
 @import '../../../Colors.scss';
 
 .Kanali {
-  position: relative;
-  min-width: 585px;
-  margin-top: 50px;
+  position: fixed;
+  left:420px;
+  top:185px;
   z-index: 0;
   -webkit-transition: 0.1s;
-  margin-right: 50px;
 
 
   .Kanal {
     width: 515px;
-    margin: 0 auto;
     height: 77px;
     margin-bottom: 26px;
     color:$text;

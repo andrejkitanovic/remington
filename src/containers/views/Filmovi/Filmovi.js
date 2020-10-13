@@ -128,7 +128,7 @@ const Filmovi = (props) => {
       switch (column) {
         case 1:
           if (mainRow === 2 || mainRow === 3) {
-            props.playMovie(null,2);
+            props.playMovie(null, 2);
           }
           break;
         default:
@@ -176,7 +176,7 @@ const Filmovi = (props) => {
   ]);
 
   return (
-    <div className="Filmovi">
+    <div className={"Filmovi" + (props.active ? " active" : "")}>
       <FilmoviKategorije
         kategorije={kategorijeData}
         active={column === 0 && activeCategory}
@@ -187,6 +187,7 @@ const Filmovi = (props) => {
           active={column === 1 && mainRow === 0 && sortSearch}
         />
         <Sort active={column === 1 && mainRow === 1 && sortPosition} />
+
         {/* {sort ? <Sort /> : <Pretrazi />} */}
         <PrikazFilmovi
           filmovi={filmoviData}

@@ -1,19 +1,16 @@
 @import '../../../Colors.scss';
 
 .FilmButtons {
+  position: fixed;
   display: -webkit-flex;
   color: $text;
-  width: 1700px;
-  margin: 0 auto;
-  margin-top: 27px;
-  -webkit-transition:  all .1s, opacity .1s;
-  margin-bottom: 49px;
+  left:160px;
+  top:550px;
+  -webkit-transition: .2s;
 
   &.show{
     opacity: 0;
-    // height: 0;
-    margin-top:0;
-    margin-bottom: 0;
+    transform: translateY(-50px);
   }
 
   div {

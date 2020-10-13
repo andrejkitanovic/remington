@@ -1,9 +1,13 @@
 @import '../../../Colors.scss';
 
 .Sort{
-    margin-top: 30px;
+    position: fixed;
+    width: 1218px;
+    right:-280px;
+    top:285px;
     display: -webkit-flex;
     justify-content: space-between;
+    transition: .2s;
 
     div{
         display: -webkit-flex;

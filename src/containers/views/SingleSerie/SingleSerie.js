@@ -84,13 +84,10 @@ const SingleSerie = props => {
       <div className="SingleSerie">
         <div className="wallpaper" style={{backgroundImage:`url(${serijaData.banner})`}}></div>
   
-        <div className="container" 
-        style={{bottom:row > 0 && "40px"}}
-        >
+   
           <FilmAbout movie={serijaData}/>
           <FilmButtons serie active={row === 0 && button} show={row > 0}/>
           <Sezone sezone={serijaData.sezone} img={serijaData.img} active={row > 0 && row} position={movie}/>
-        </div>
       </div>
     );
 }

@@ -135,9 +135,12 @@ const TVKanali = (props) => {
         position={kanal}
         hovered={column === 1}
       />
-      <div className="mover"  style={{bottom: epg * 57 + "px"}}>
+      <div className="mover"  
+      // style={{bottom: epg * 57 + "px"}}
+      >
         <SortiranjeIPretraga
           active={column === 2 && mainRow === 0 && sortSearch}
+          tv
         />
         <MiniPlayer active={column === 2 && mainRow === 1} />
         <EPGLista

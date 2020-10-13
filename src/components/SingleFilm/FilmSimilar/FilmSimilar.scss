@@ -1,8 +1,9 @@
 @import "../../../Colors.scss";
 
 .FilmSimilar {
+  position: relative;
   width: 100%;
-  margin-top: 49px;
+  margin-top: 130px;
   overflow: hidden;
 
   .row {
@@ -24,11 +25,12 @@
   }
 
   .container {
-    position: relative;
+    position: fixed;
     display: -webkit-flex;
-    margin-top: 38px;
-    -webkit-transition: 0.1s;
-    margin-left: 30px;
+    left:130px;
+    top:720px;
+    -webkit-transition: 0.2s;
+   
 
     .Movie {
       min-width: 217px;

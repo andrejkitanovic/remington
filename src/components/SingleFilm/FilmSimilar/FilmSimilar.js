@@ -9,7 +9,7 @@ const filmSimilar = (props) => {
   return (
     <div className="FilmSimilar">
       <div className={"row" + (props.active ? " active" : "")}>STRANI FILMOVI 2020</div>
-      <div className="container"  style={{right:props.position * 248 + "px"}}>{movies}</div>
+      <div className="container"  style={{transform:`translateX(${props.position * -248}px)`}}>{movies}</div>
     </div>
   );
 };

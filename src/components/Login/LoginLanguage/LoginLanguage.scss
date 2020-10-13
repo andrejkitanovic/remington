@@ -1,0 +1,18 @@
+.LoginLanguage{
+    div{
+        display: -webkit-flex;
+        align-items: center;
+        justify-content: center;
+        background: #4d2d52;
+        width: 360px;
+        height: 70px;
+        margin-bottom: 45px;
+        border-radius: 50px;
+        font-size: 23px;
+        font-weight: 600;
+
+        &.active{
+            background:#6E2AA5;
+        }
+    }
+}

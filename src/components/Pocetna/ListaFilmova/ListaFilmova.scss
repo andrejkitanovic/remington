@@ -5,9 +5,13 @@
     height: 400px;
     display: -webkit-flex;
     align-items: center;
-    -webkit-transition:.1s;
-    margin-left: 25px;
-    top:480px;
+    -webkit-transition:.2s;
+    top:460px;
+    left: 430px;
+
+    &.two{
+        top:920px;
+    }
 
     .Film {
         min-width: 217px;
@@ -17,10 +21,15 @@
         background:no-repeat center center;
         background-size: cover;
         border: 5px solid transparent;
-        box-sizing: border-box;
 
         &.active{
             border: 5px solid $light;
         }
+
+        
+    }
+
+    &.translate{
+        transform: translateY(-250px);
     }
 }
