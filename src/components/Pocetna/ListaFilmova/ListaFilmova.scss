@@ -1,35 +1,99 @@
 @import '../../../Colors.scss';
 
-.ListaFilmovaPocetna{
-    position: fixed;
-    height: 400px;
+.ListaFilmovaPocetna {
+  position: fixed;
+  height: 400px;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-transition: ease-out 0.9s;
+  top: 460px;
+  left: 430px;
+
+  &.two {
+    top: 920px;
+  }
+
+  .Film {
     display: -webkit-flex;
     align-items: center;
-    -webkit-transition:ease-out 1.5s;
-    top:460px;
-    left: 430px;
+    justify-content: center;
+    position: relative;
+    min-width: 217px;
+    height: 332px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+    background: url('../../../assets/Delete/movie.png') no-repeat center ceneter;
+    background-size: cover;
 
-    &.two{
-        top:920px;
+    &.active {
+      .opis {
+        height: 95px;
+      }
     }
 
-    .Film {
-        min-width: 217px;
-        height: 322px;
-        margin-right: 26px;
-        border-radius: 5px;
-        background:no-repeat center center;
-        background-size: cover;
-        border: 5px solid transparent;
+    .opis {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 0;
+      background: $light;
+      -webkit-transition: 0.2s;
 
-        &.active{
-            border: 5px solid $light;
+      h5 {
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 18px;
+        margin: 7px 16px;
+      }
+
+      .zanr {
+        padding: 7px 16px;
+        box-sizing: border-box;
+        height: 59px;
+        background: $main;
+
+        .rating {
+          display: -webkit-flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 8px;
+
+          p {
+            font-size: 17px;
+          }
+
+          .stars {
+            --percent: calc(var(--stars) / 5 * 100%);
+            display: inline-block;
+            font-family: Times; // make sure ★ appears correctly
+            line-height: 1;
+
+            &::before {
+              content: '★★★★★';
+              letter-spacing: 3px;
+              background: linear-gradient(
+                90deg,
+                #eaef05 var(--percent),
+                white var(--percent)
+              );
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
         }
 
-        
+        p {
+          margin: 0;
+          font-weight: 500;
+          font-size: 14px;
+        }
+      }
     }
+  }
 
-    &.translate{
-        transform: translateY(-250px);
-    }
+  &.translate {
+    transform: translateY(-250px);
+  }
 }

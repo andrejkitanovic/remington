@@ -3,7 +3,7 @@
 .PrikazFilmovi {
     position: fixed;
     margin-top: 20px;
-    -webkit-transition:.2s;
+    // -webkit-transition:.2s;
     left:980px;
     top:370px;
     transition: .2s;
@@ -13,7 +13,7 @@
 
     .container{
         position: absolute;
-        transition: .2s;
+        transition:ease-out .4s;
     }
 
     .prikaz{

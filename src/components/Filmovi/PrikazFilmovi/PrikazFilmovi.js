@@ -54,7 +54,7 @@ const prikazFilmovi = (props) => {
       className="PrikazFilmovi"
     
     >
-      <div className="container"   style={{ transform: `translateX(${props.position * -245}px)` }}>
+      <div className="container"   style={{ transform: `translateX(${props.position > 2 ? (props.position - 2) * -245 : 0}px)` }}>
         <div className="prikaz">{filmovi1}</div>
         <div className="prikaz">{filmovi2}</div>
       </div>
