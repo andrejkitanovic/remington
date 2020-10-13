@@ -5,7 +5,7 @@
     background:$background;
     width: 370px;
     height: 100%;
-    -webkit-transition:width .3s;
+    -webkit-transition:width .2s;
     overflow: hidden;
     z-index: 102;
 
@@ -30,7 +30,7 @@
         }
 
         &.active{
-            background:$side;
+            background:$light;
         }
     }
 
