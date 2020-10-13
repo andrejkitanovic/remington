@@ -52,7 +52,7 @@ const Login = (props) => {
           if (row === 2) {
               if(column === 0){
                 localStorage.setItem("jwToken","hash")
-                props.logIn();
+                props.history.push('/home')
               }else if (column === 1) {
               setRow(0);
               setStep(0);
