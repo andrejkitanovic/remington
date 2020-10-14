@@ -116,7 +116,7 @@ const Pocetna = (props) => {
   });
 
   return (
-    <div className="Pocetna active">
+    <div className={"Pocetna" + (!props.menu ? " active" : "")}>
       <div className={"row" + (column === 2 ? " translate" : "")}>
         <p>TV Kanali</p>
       </div>
