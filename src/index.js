@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import { Provider } from "react-redux";
-import { createStore , applyMiddleware, compose, combineReducers} from "redux";
+import { createStore , applyMiddleware, combineReducers} from "redux";
 
 import menuReducer from './store/reducers/menu'
 

@@ -9,6 +9,7 @@ const Main = (props) => {
 
   useEffect(() => {
     localStorage.getItem('jwToken') ? props.history.push('/home') : props.history.push('/login')
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   return (

@@ -50,9 +50,13 @@ const SingleFilm = (props) => {
       row === 0 && setRow(1)
     }
 
-    // const enter = () => {
-
-    // };
+    const enter = () => {
+      if(row === 0){
+        if(button === 3){
+          props.history.goBack()
+        }
+      }
+    };
 
     const keyHandler = (e) => {
       switch (e.keyCode) {
@@ -69,7 +73,7 @@ const SingleFilm = (props) => {
           right()
           break
         case Utility.enter:
-          //   enter();
+            enter();
           break
         case Utility.back:
           props.history.goBack()

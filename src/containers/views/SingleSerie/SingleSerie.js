@@ -48,9 +48,13 @@ const SingleSerie = (props) => {
       setMovie(0)
     }
 
-    // const enter = () => {
-
-    // };
+    const enter = () => {
+      if(row === 0){
+        if(button === 1){
+          props.history.goBack();
+        }
+      }
+    };
 
     const keyHandler = (e) => {
       switch (e.keyCode) {
@@ -67,7 +71,7 @@ const SingleSerie = (props) => {
           right()
           break
         case Utility.enter:
-          //   enter();
+            enter();
           break
         case Utility.back:
           props.history.goBack()
