@@ -110,16 +110,16 @@ const Login = (props) => {
       <div className="background"></div>
       <div className="main">
         {step === 0 && (
-          <React.Fragment>
+          <>
             <h1>CHOOSE LANGUAGE</h1>
             <LoginLanguage active={row} />
-          </React.Fragment>
+          </>
         )}
         {step === 1 && (
-          <React.Fragment>
+          <>
             <h1>LOGIN TO YOUR ACCOUNT</h1>
             <LoginForm row={row} column={column} />
-          </React.Fragment>
+          </>
         )}
       </div>
     </div>
