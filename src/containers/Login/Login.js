@@ -6,10 +6,17 @@ import Utility from "../../utility/Keys";
 import LoginLanguage from "../../components/Login/LoginLanguage/LoginLanguage";
 import LoginForm from "../../components/Login/LoginForm/LoginForm";
 
+import axios from '../../utility/axios'
+
 const Login = (props) => {
   const [step, setStep] = useState(0);
   const [row, setRow] = useState(0);
   const [column, setColumn] = useState(0);
+
+  const [data,setData] = useState({
+    username:"ewfwe24tc3t3c4",
+    password:"Kz7f5ph8xbMH"
+  })
 
   useEffect(() => {
     const down = () => {
@@ -52,6 +59,7 @@ const Login = (props) => {
           if (row === 2) {
               if(column === 0){
                 localStorage.setItem("jwToken","hash")
+                login()
                 props.history.push('/home')
               }else if (column === 1) {
               setRow(0);
@@ -90,6 +98,12 @@ const Login = (props) => {
 
     return () => document.removeEventListener("keydown", keyHandler);
   });
+
+  const login = () => {
+    axios.post("/login",{username:data.username,password:data.password})
+    .then(res => console.log(res.data))
+    .catch(err => console.log(err))
+  }
 
   return (
     <div className="Login">

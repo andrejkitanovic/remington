@@ -13,11 +13,18 @@ import serijeData from "../../../data/serije.json";
 import {connect} from 'react-redux'
 import {toggleMenu} from '../../../store/actions/menu'
 
+import axios from '../../../utility/axios'
+
 const Pocetna = (props) => {
   const [column, setColumn] = useState(0);
   const [positionChannel, setPositionChannel] = useState(0);
   const [positionMovie, setPositionMovie] = useState(0);
   const [positionSerie, setPositionSerie] = useState(0);
+
+  useEffect(() => {
+    axios.get("/channels/new")
+    .then(res => console.log(res))
+  },[])
 
   useEffect(() => {
     const left = () => {
