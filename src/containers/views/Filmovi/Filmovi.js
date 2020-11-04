@@ -15,7 +15,7 @@ import {connect} from 'react-redux'
 import {toggleMenu} from '../../../store/actions/menu'
 
 const Filmovi = (props) => {
-  const [sort, setSort] = useState(true);
+  const [sort] = useState(true);
 
   const [column, setColumn] = useState(0);
   const [activeCategory, setActiveCategory] = useState(0);

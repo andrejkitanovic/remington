@@ -18,7 +18,7 @@ const TVKanali = (props) => {
   const [column, setColumn] = useState(0);
   const [kategorija, setKategorija] = useState(0);
   const [kanal, setKanal] = useState(0);
-  const [kanalSelected, setKanalSelected] = useState(0);
+  const [kanalSelected] = useState(0);
   const [mainRow, setMainRow] = useState(0);
   const [sortSearch, setSortSearch] = useState(0);
   const [epg, setEpg] = useState(0);

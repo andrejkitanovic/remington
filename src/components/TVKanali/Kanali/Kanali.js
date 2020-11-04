@@ -8,7 +8,7 @@ const kanali = (props) => {
     <div className={"Kanal" + (props.position === index && props.hovered ? " selected" : "") + (props.active === index ? " active" : "")} >
       <div className="flex">
         <div className="img" style={{ backgroundImage: `url(${Kanal})` }}></div>
-        <p>Utakmica Broj Ses - Pasipoljana (Seoski Fudbal)</p>
+        <p>Frankie Drake istrazuje, serija 3, ep. 3.</p>
       </div>
       <div className="progress"></div>
     </div>

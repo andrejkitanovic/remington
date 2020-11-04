@@ -25,7 +25,7 @@ const Login = (props) => {
           row < 2 && setRow((r) => r + 1);
           break;
         case 1:
-          row < 3 && setRow((r) => r + 1);
+          row < 2 && setRow((r) => r + 1);
           break;
         default:
           break;
